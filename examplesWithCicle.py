@@ -1,4 +1,5 @@
 from collections import defaultdict, Counter
+from itertools import chain
 # Задание 1
 # Дан список учеников, нужно посчитать количество повторений каждого имени ученика.
 students = [
@@ -91,10 +92,23 @@ is_male = {
     'Миша': True,
 }
 # ???
+a = (list(chain.from_iterable(d.values() for d in class_name['students'])) for class_name in school)
 
 # Пример вывода:
 # В классе 2a 2 девочки и 0 мальчика.
 # В классе 3c 0 девочки и 2 мальчика.
+
+dict_1 = defaultdict(int)
+for el in a:
+    for key in el:
+        if is_male[key]:
+            dict_1['girls'] += el[key]
+            print(11)
+        else:
+            print(22)
+            dict_1['boys'] += el[key]
+
+print(dict_1)
 
 
 # Задание 5
