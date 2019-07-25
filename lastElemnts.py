@@ -9,6 +9,10 @@ q.append(7)
 print(q)
 q.appendleft(7)
 print(q)
+q.pop()
+print(q)
+q.popleft()
+print(q)
 
 def search(lines, pattern, history=3):
     prev_lines = deque(maxlen=history)
