@@ -1,5 +1,5 @@
 from collections import defaultdict, OrderedDict
-
+import json
 
 
 d = {
@@ -26,3 +26,18 @@ j['a'].add(2)
 j['b'].add(4)
 
 print(c, j)
+
+
+orderDict = OrderedDict()
+
+orderDict['first'] = 1
+orderDict['second'] = 2
+orderDict['third'] = 3
+orderDict['fourth'] = 4
+orderDict['fivth'] = 5
+
+print(orderDict)
+
+jsdict = json(orderDict)
+
+print(jsdict)
