@@ -8,20 +8,21 @@ HUNDRED = "hundred"
 
 
 def checkio(number):
-    if number > 100:
-        print(number // 100,'hundred')
-        tens = number % 100
-        print(tens , 'tens')
-  number = str(number)
-  speech = ''
-    number = str(number)
-    speech = ''
-    if len(number) == 3:
-        print(number,'hundred')
-    if len(number) == 2:
-        print(number,'OTHER_TENS')
-    if len(number) == 1:
-        print(number)
+    test = { x + 1:FIRST_TEN[x] for x in range(0,len(FIRST_TEN))}
+    hundred = number // 100
+    if hundred > 0:
+        if number % 100 == 0:
+            return print()
+        number = number - hundred * 100
+
+
+    tens = number // 10
+    if tens > 0:
+        num = number - tens * 10
+    else:
+        num = number
+
+  print(test)
 
     #replace this for solution
     return 'string representation of n'
