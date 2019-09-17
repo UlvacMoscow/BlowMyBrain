@@ -7,6 +7,10 @@ OTHER_TENS = ["twenty", "thirty", "forty", "fifty", "sixty", "seventy",
 HUNDRED = "hundred"
 
 
+FIRST_TEN_DICT = { x + 1:FIRST_TEN[x] for x in range(0,len(FIRST_TEN))}
+SECOND_TEN_DICT = { x+10:SECOND_TEN[x] for x in range(0,len(SECOND_TEN))}
+OTHER_TENS_DICT = { ((x+2)*10):OTHER_TENS[x] for x in range(0,len(OTHER_TENS))}
+
 def checkio(number):
     test = { x + 1:FIRST_TEN[x] for x in range(0,len(FIRST_TEN))}
     hundred = number // 100
