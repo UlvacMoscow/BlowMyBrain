@@ -10,3 +10,12 @@ print(next(gen_it))
 print(next(gen_it))
 print(next(gen_it))
 print(next(gen_it))
+
+a = [1, 2, 3, 4, 5]
+print(type(a))
+
+b = (i for i in a if i % 2 == 0)
+print(type(b))
+print(next(b))
+print(next(b))
+print(next(b))
