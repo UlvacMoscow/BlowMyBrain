@@ -3,17 +3,13 @@ import time
 
 
 
-class Thread:
+def sleep(n, name):
+    print('sleep thread {}'.format(name))
+    time.sleep(n)
+    print('aaayyyyyyy')
 
-    def call_one(self):
-        print('one')
-        self.call_two()
+t = threading.Thread(target=sleep, name='Thread1', args=(5, 'Thread1'))
 
-    def call_two(self):
-        print('two')
-        self.call_one()
+t.start()
 
-
-a = Thread()
-x = threading.Thread(target=a.call_one())
-x.start()
+print('thread main')
