@@ -2,39 +2,13 @@ import threading
 import time
 
 
-def ping():
-    time.sleep(1)
-    print('ping')
-    return 1
-
-    # while True:
-        # print('ping')
-
-def pong():
-    print('pong')
-    return 1
-
-    # while True:
-    # time.sleep(1)
-        # print('pong')
-
-
-# po = threading.Thread(target=ping)
-# pi = threading.Thread(target=pong)
-#
-# po.start()
-# pi.start()
-
-def run():
+def ping(voi):
     while True:
-        ping()
-        # time.sleep(2)
-        pong()
+        time.sleep(0.1)
+        print('{}'.format(voi))
 
-
-t = threading.Thread(target=run)
-t.start()
-# run()
-# ping()
-# pong()
+po = threading.Thread(target=ping, args=['ping'])
+pi = threading.Thread(target=ping, args=['pong'])
 #
+po.start()
+pi.start()
