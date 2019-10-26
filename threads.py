@@ -2,7 +2,6 @@ import threading
 import time
 
 
-
 def sleep(n, name):
     print('sleep thread {}'.format(name))
     time.sleep(n)
