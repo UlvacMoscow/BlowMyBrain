@@ -13,3 +13,12 @@ def original_function():
 
 decorate_original_function = simple_decorator(original_function)
 decorate_original_function()
+
+# syntax decorate
+
+@simple_decorator
+def reoriginal_function():
+    print('i am reorigin')
+
+
+reoriginal_function()
