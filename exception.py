@@ -11,11 +11,16 @@
 # finally:
     # код который выполняеться в любом случае
 
+# raise принудительно вызвать исключение нужно исключение и сам объект для исключения
+
 try:
-    f = open('simple.txt', 'w')
+    f = open('simple.txt', 'r') # run2
+    # f = open('simple.txt', 'w') # run1
     f.write('Test test test')
 except IOError:
     print('Error: could not find file to read data!')
-else:
-    print('success')
-    f.close()
+# else:
+#     print('success')
+#     f.close()
+finally:
+    print('i always work')
