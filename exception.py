@@ -24,3 +24,17 @@ except IOError:
 #     f.close()
 finally:
     print('i always work')
+
+# raise NameError('I am object of string')
+
+# создаем свой класс исключение он должен быть унаследован от класса Exception явно или нет
+
+
+class MyError(Exception):
+    def __init__(self, value):
+        self.value = value
+
+try:
+    raise MyError(5*5)
+except MyError as e:
+    print('My Exception with value: ', e.value)
